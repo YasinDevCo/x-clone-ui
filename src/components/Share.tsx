@@ -24,6 +24,7 @@ const Share = () => {
   };
 
   const previewURL = media ? URL.createObjectURL(media) : null;
+console.log(media);
 
   return (
     <form
@@ -43,7 +44,8 @@ const Share = () => {
           name="desc"
           placeholder="What is happening?!"
           className="bg-transparent outline-none placeholder:text-textGray text-xl"
-        />
+
+      />
         {/* PREVIEW IMAGE */}
         {media?.type.includes("image") && previewURL && (
           <div className="relative rounded-xl overflow-hidden">
